@@ -4,7 +4,6 @@
 
 $this->title = 'Soal 1';
 use yii\helpers\Html;
-
 ?>
 
 <div class="site-index">

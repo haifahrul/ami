@@ -63,11 +63,7 @@ class UserSearch extends User
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'id' => $this->id,
-            'phone' => $this->phone,
-//            'province_id' => $this->province_id,
-//            'city_id' => $this->city_id,
-            'user.zipcode' => $this->zipcode
+//            'id' => $this->id,
         ]);
 
         $query->andFilterWhere(['like', 'firstname', $this->firstname])
@@ -76,6 +72,8 @@ class UserSearch extends User
             ->andFilterWhere(['like', 'gender', $this->gender])
             ->andFilterWhere(['like', 'birthday', $this->birthday])
             ->andFilterWhere(['like', 'address', $this->address])
+            ->andFilterWhere(['like', 'phone', $this->phone])
+            ->andFilterWhere(['like', 'user.zipcode', $this->zipcode])
             ->andFilterWhere(['like', 'province.name', $this->province_id])
             ->andFilterWhere(['like', 'city.city', $this->city_id]);
 

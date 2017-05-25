@@ -178,8 +178,9 @@ class UserController extends Controller
 
         return json_encode($data);
     }
-    
-    public function actionErd() {
-        
+
+    public function actionErd()
+    {
+
     }
 }

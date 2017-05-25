@@ -8,6 +8,7 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use odaialali\yii2toastr\ToastrFlash;
 
 AppAsset::register($this);
 ?>
@@ -39,9 +40,9 @@ AppAsset::register($this);
             ['label' => 'Soal 1', 'url' => ['/site/index']],
             ['label' => 'Soal 2', 'url' => ['/site/soal-2']],
             ['label' => 'Soal 3', 'url' => ['/site/soal-3']],
-            ['label' => 'Soal 4', 'url' => ['/user/index']],
-            ['label' => 'Soal 5', 'url' => ['/site/soal-5']],
-            ['label' => 'Soal 6', 'url' => ['/site/soal-6']],
+            ['label' => 'Soal 4', 'url' => ['/user/']],
+            ['label' => 'Soal 5', 'url' => ['/soal-5/']],
+            ['label' => 'Soal 6', 'url' => ['/pesawat/']],
 //            Yii::$app->user->isGuest ? (['label' => 'Login', 'url' => ['/site/login']]) : (
 //                '<li>'
 //                . Html::beginForm(['/site/logout'], 'post')
@@ -61,6 +62,15 @@ AppAsset::register($this);
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
+        <?php
+        if (Yii::$app->session->hasFlash('success') || Yii::$app->session->hasFlash('warning') || Yii::$app->session->hasFlash('danger')) {
+            echo ToastrFlash::widget([
+                'options' => [
+                    'positionClass' => 'toast-top-right'
+                ]
+            ]);
+        }
+        ?>
         <?= $content ?>
     </div>
 </div>
