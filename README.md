@@ -28,7 +28,7 @@ Database filename is `testsibisnis.sql` and locate in root folder.
 ```php
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=testsibisnsi',
+    'dsn' => 'mysql:host=localhost;dbname=testsibisnis',
     'username' => 'root',
     'password' => '',
     'charset' => 'utf8',
