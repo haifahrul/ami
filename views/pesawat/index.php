@@ -17,24 +17,20 @@ use yii\bootstrap\ActiveForm;
 <div class="site-index">
     <h1><?= Html::encode($this->title) ?></h1>
 
-<!--    --><?php //$form = ActiveForm::begin([
-//        'layout' => 'horizontal',
-//        'fieldConfig' => [
-//            'template' => "{label}\n{beginWrapper}\n{input}\n{hint}\n{error}\n{endWrapper}",
-//            'horizontalCssClasses' => [
-//                'label' => 'col-sm-2',
-//                'wrapper' => 'col-sm-8',
-//                'error' => '',
-//                'hint' => '',
-//            ],
-//        ],
-//    ]); ?>
-<!--    --><?//= $form->field($model, 'd')->textInput(['maxlength' => true, 'value' => 'faiz.fadly@gmail.com']) ?>
-<!--    --><?//= $form->field($model, 'a')->passwordInput(['value' => 'admin']) ?>
-<!--    <div class="form-group">-->
-<!--        <div class="col-lg-offset-2">-->
-<!--            --><?//= Html::submitButton('Sign in', ['class' => 'btn btn-success']) ?>
-<!--        </div>-->
-<!--    </div>-->
-<!--    --><?php //ActiveForm::end(); ?>
+    <p>Filter Data Berdasarkan:</p>
+    <ol>
+        <li>d (Keberangkatan): JKT</li>
+        <li>a (Kedatangan): DPS</li>
+        <li>date (Pergi): 2017-05-27</li>
+        <li>ret_date (Pulang): 2017-06-02</li>
+        <li>adult: 1</li>
+        <li>child: 0</li>
+        <li>infant: 0</li>
+    </ol>
+
+    <a href="http://testsibisnis.test/pesawat-restful/get-pesawat?d=JKT&a=DPS&date=2017-05-27&ret_date=2017-06-02&adult=1&child=0&infant=0"
+       target="_blank">
+        <div class="btn btn-success">Show Data</div>
+    </a>
+
 </div>
