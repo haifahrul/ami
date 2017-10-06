@@ -43,6 +43,7 @@ AppAsset::register($this);
             ['label' => 'Soal 4', 'url' => ['/user/']],
             ['label' => 'Soal 5', 'url' => ['/soal-5/']],
             ['label' => 'Soal 6', 'url' => ['/pesawat/']],
+			['label' => 'Scraping', 'url' => ['/logal-mulia/']],
 //            Yii::$app->user->isGuest ? (['label' => 'Login', 'url' => ['/site/login']]) : (
 //                '<li>'
 //                . Html::beginForm(['/site/logout'], 'post')
