@@ -1,4 +1,4 @@
-AMI Exam
+PT. AMI - Exam
 ============================
 
 INSTALLATION
